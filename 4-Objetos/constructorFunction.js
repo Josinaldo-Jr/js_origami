@@ -24,11 +24,25 @@ function Pessoa (nomePessoa, idadePessoa) {
  
 function Dom (elemento) {
 
-  const elements = document.querySelectorAll(elemento);
-  this.ativo = function (classe) {
-    elemento.classList.add(classe);
+  const elementList = document.querySelectorAll(elemento);
+  this.elements = elementList;
+
+   this.addClass = function (classe) {
+    elementList.forEach((element) => {
+      element.classList.add(classe);
+    }); 
+    console.log(elementList);   
   }
-  
+
+  this.removeClass = function (classe) {
+    elementList.forEach((element) => {
+      element.classList.remove(classe);
+    });   
+    console.log(elementList); 
+  }  
 }
-  
-  
+
+const seletor = new Dom("h3"); 
+console.log(seletor.elements);
+seletor.addClass("ativo");
+seletor.removeClass("ativo");  
