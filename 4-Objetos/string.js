@@ -55,7 +55,8 @@ console.log(`Total de Recebimentos: ${totalRecebimento}.`)
                   <li><span>Produtos</span></li>
                   <li><span>Contato</span></li>
               </ul>`;
-html = html.replace(/<span>/g, '<a>').replace(/<\/span>/g, '</a>');
+// html = html.replace(/<span>/g, '<a>').replace(/<\/span>/g, '</a>');
+html = html.split("span").join("a");
 console.log(html);             
   
   // Retorne o último caracter da frase
@@ -65,6 +66,7 @@ console.log(html);
   const ultimoCaracter = frase.charAt(frase.length-1);
 
   console.log(ultimoCaracter);
+  console.log(frase.slice(-1)) //Outra maneira
   
   // Retorne o total de taxas
   const transacoes_2 = ['Taxa do Banco', '   TAXA DO PÃO', '  taxa do mercado', 'depósito Bancário', 'TARIFA especial'];
@@ -77,8 +79,19 @@ console.log(html);
 
   // });
 
-  const totalTaxas = transacoes_2.filter(transacao => 
-      transacao.toLowerCase().includes('taxa')
-  ).length;
+  // const totalTaxas = transacoes_2.filter(transacao => 
+  //     transacao.toLowerCase().includes('taxa')
+  // ).length;
+
+let totalTaxas = 0
+
+  transacoes_2.forEach((item) => {
+    item = item.toLowerCase().trim().slice(0,4);
+
+    if (item === "taxa") {
+      totalTaxas++;
+    }
+
+  });
   
   console.log(totalTaxas);  
