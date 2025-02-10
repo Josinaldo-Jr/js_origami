@@ -8,7 +8,7 @@ console.log(numeroAleatorio);
 // Retorne o maior número da lista abaixo
 const numeros = '4, 5, 20, 8, 9';
 
-const arrayNumermos = numeros.split(", ").map(Number);
+const arrayNumermos = numeros.split(", ");
 const maiorNumero = Math.max(...arrayNumermos);
 
 console.log(maiorNumero);
@@ -32,9 +32,21 @@ const listaPrecos = ['R$ 59,99', ' R$ 100,222',
                       console.log(`Total: R$ ${total.toFixed(2)}`);
                     
                       return total.toFixed(2);
-                    }
+                    }      
                     
-                   
-                    
-                    somarPrecos(listaPrecos);
-                    
+                    somarPrecos(listaPrecos);  
+/*Outra maneira:*/
+                      function limparValor(valor) {
+                        valor = +valor.replace(/[^0-9,]/g, "").replace(",", ".");
+                        valor = +valor.toFixed(2);
+                        return valor
+                      }
+
+                      let soma = 0;
+                      listaPrecos.forEach((valor) => {
+                        soma += limparValor(valor);
+                      });
+
+                      console.log(soma.toLocaleString("pt-BR", {style: "currency", currency: "BRL"}));
+
+                      limparValor(listaPrecos[0]);
