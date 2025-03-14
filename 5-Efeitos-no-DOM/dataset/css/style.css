@@ -235,46 +235,62 @@ body {
   }
 }
 
-/*Navegação por Tabs*/
+/*Navegação por Tabs -- dataset*/
 
-.js .js-tabcontent section {
+.js [data-tabcontent="tabcontent"] section[data-anime] {
   display: none;
 }
 
-.js-tabcontent section.ativo {
+[data-tabcontent="tabcontent"] section.ativo[data-anime="show-down"] {
   display: block;
-  animation: show 1s forwards;
+  animation: showDown 1s forwards;
 }
 
-@keyframes show {
-  from {
-    opacity: 0;
-    transform: translate3d(-30px, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-
+[data-tabcontent="tabcontent"] section.ativo[data-anime="show-right"] {
+  display: block;
+  animation: showRight 1s forwards;
 }
+
+@keyframes showDown {
+from {
+  opacity: 0;
+  transform: translate3d(0, -30px, 0);
+}
+
+to {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+} 
+
+@keyframes showRight {
+from {
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+}
+
+to {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+} 
 
 /*Accordion List*/
 
-.js .js-accordion dd {
+.js [data-accordion="accordion"] dd {
   display: none;  
 }
 
-.js-accordion dt::after {
+[data-accordion="accordion"] dt::after {
   content: "⬎";
   margin-left: 10px;
 }
 
-.js-accordion dt.ativo::after {
+[data-accordion="accordion"] dt.ativo::after {
   content: "⬏";
 }
 
-.js-accordion dd.ativo {
+[data-accordion="accordion"] dd.ativo {
   display: block;
   animation: showAccordion 1s forwards;
 }
@@ -305,14 +321,14 @@ body {
 
 /*Anima Scroll*/
 
-.js .js-scroll {
+.js [data-scroll] {
   opacity: 0;
   transform: translate3d(-30px, 0, 0);
   transition: .5;  
 
 }
 
-.js .js-scroll.ativo {
+.js [data-scroll].ativo {
   opacity: 1;
   transform: translate3d(0, 0, 0);
   transition: .5s;  
