@@ -18,3 +18,4 @@ sectionsShowRight.forEach(section => section.classList.add("show-right"));
 // para a direita
 
 // Substitua todas as classes js- por data atributes.
+
