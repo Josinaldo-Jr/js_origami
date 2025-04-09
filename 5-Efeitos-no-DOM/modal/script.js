@@ -5,11 +5,13 @@ import initTabNav from "./modules/initTabNav.js";
 import initAccordion from "./modules/initAccordion.js";
 import initScrollSuave from "./modules/initScrollSuave.js";
 import initAnimaScroll from "./modules/initAnimaScroll.js";
+import initModal from "./modules/initModal.js";
 
 initTabNav();
 initAccordion();
 initScrollSuave();
 initAnimaScroll();
+initModal();
 
 // --------------------------------
 
