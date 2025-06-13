@@ -7,6 +7,7 @@ import initScrollSuave from "./modules/initScrollSuave.js";
 import initAnimaScroll from "./modules/initAnimaScroll.js";
 import initModal from "./modules/initModal.js";
 import initTooltip from "./modules/initTooltip.js";
+import initDropDownMenu from "./modules/initDropDownMenu.js";
 
 initTabNav();
 initAccordion();
@@ -14,6 +15,7 @@ initScrollSuave();
 initAnimaScroll();
 initModal();
 initTooltip();
+initDropDownMenu();
 
 
 // --------------------------------
