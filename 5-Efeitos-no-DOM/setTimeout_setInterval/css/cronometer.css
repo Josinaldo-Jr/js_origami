@@ -1,0 +1,57 @@
+/* ./css/cronometer-style.css */
+
+.cronometer-menu-item {
+    display: flex; /* Use flexbox to align content */
+    align-items: center; /* Vertically center content */
+    padding: 0 15px; /* Adjust padding as needed */
+    /* You might want to adjust the background or text color to fit your menu theme */
+    background-color: #333; /* Example background, adjust to match your menu */
+    color: #fff; /* Example text color */
+}
+
+.cronometer-container-mini {
+    display: flex;
+    flex-direction: column; /* Stack display and controls vertically */
+    align-items: center;
+    gap: 5px; /* Space between display and buttons */
+    padding: 5px 0; /* Add some vertical padding */
+}
+
+#display {
+    font-size: 1.2em; /* Smaller font size for menu */
+    font-weight: bold;
+    color: #fff; /* White text for better visibility on a dark menu */
+    margin-bottom: 0; /* Remove default margin */
+    white-space: nowrap; /* Prevent time from wrapping */
+}
+
+.controls {
+    display: flex;
+    gap: 5px; /* Space between buttons */
+}
+
+.controls button {
+    font-size: 0.8em; /* Smaller button text */
+    padding: 5px 10px; /* Smaller padding for buttons */
+    margin: 0; /* Remove default margin */
+    border: none;
+    border-radius: 3px; /* Slightly less rounded corners */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#startBtn {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+#startBtn:hover {
+    background-color: #218838;
+}
+
+#pauseBtn {
+    background-color: #ffc107; /* Yellow */
+    color: #333;
+}
+#pauseBtn:hover {
+    background-color: #e0a800;
+}
