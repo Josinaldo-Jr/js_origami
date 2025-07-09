@@ -1,14 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fetch 1-2-3</title>
+    <title>Fetch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 40px;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label,
+        input,
+        button {
+            display: block;
+            width: 90%;
+            margin: 0 auto 15px auto;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #00bfa5;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            white-space: pre-wrap;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #valor {
+            font-size: 2rem;
+            color: #00bfa5;
+            margin-top: 20px;
+        }
+
+        #piada {
+            font-size: 1.2rem;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        button:hover {
+            background-color: #009e8b;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="conteudo"></div>
+    <!-- <div class="conteudo"></div>
     <br>
-    <div class="conteudo2"></div>
+    <div class="conteudo2"></div> -->
+
+    <form id="cep-form">
+        <label for="cep">Digite o CEP:</label>
+        <input type="text" id="cep" name="cep" placeholder="Ex: 01001-000" required />
+        <button type="submit">Buscar</button>
+    </form>
+
+    <div id="resultado"></div>
+    <hr>
+    <h1>Valor da Bitcoin (BTC) em Reais</h1>
+    <div id="valor">Carregando...</div>
+
+    <hr>
+    <h1>Piadas do Chuck Norris</h1>
+    <div id="piada">Clique em "Próxima" para ver uma piada!</div>
+    <button id="proxima">Próxima</button>
+
     <script src="script.js"></script>
+
 </body>
+
 </html>
